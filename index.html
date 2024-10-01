@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Task Manager</h2>
+
+    <form id="taskForm">
+        <label for="taskInput">Task</label>
+        <input type="text" id="taskInput" placeholder="Add new task" required>
+
+        <label for="customCategoryInput">Custom Category</label>
+        <input type="text" id="customCategoryInput" placeholder="Add custom category" required>
+
+        <label for="dueDateInput">Due Date</label>
+        <input type="date" id="dueDateInput" required>
+
+        <label for="dueTimeInput">Due Time</label>
+        <input type="time" id="dueTimeInput" required>
+
+        <label for="prioritySelect">Priority</label>
+        <select id="prioritySelect">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div class="filters">
+        <label for="categoryFilter">Filter by Category: </label>
+        <select id="categoryFilter">
+            <option value="All">All</option>
+        </select>
+
+        <label for="priorityFilter">Filter by Priority: </label>
+        <select id="priorityFilter">
+            <option value="All">All</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+    </div>
+
+    <!-- New Sorting Section -->
+    <div class="sort">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect">
+            <option value="Date">Due Date</option>
+            <option value="Priority">Priority</option>
+        </select>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
